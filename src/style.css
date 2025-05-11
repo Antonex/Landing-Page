@@ -1,0 +1,212 @@
+/* Importing font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --dark-background: #1f2937;
+  --blue-color: #3882f6;
+  --quote-section-color: #e5e7eb;
+  --hero-main-text: 48px;
+  --hero-secondary-text: 18px;
+  --header-logo-text: 24px;
+  --info-quote-text: 36px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif, monospace;
+}
+
+.hero {
+  background-color: var(--dark-background);
+  display: grid;
+  place-items: center;
+}
+
+.hero .header_container img {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.hero .header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero .header_container,
+.hero_content,
+.project_imgs,
+.quote_section div,
+.sign_up_box {
+  width: 50rem;
+  /* background-color: antiquewhite; */
+  user-select: none;
+}
+
+.hero .header_container .link_container {
+  width: 25rem;
+  /* background-color: white; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hero .header_container .link_container a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #e5e7eb;
+  transition: color 300ms ease;
+}
+
+/* This is for chaning the link color */
+.hero .header_container .link_container a:hover {
+  color: #3882f6;
+}
+
+/* This is for the animated border effect */
+.hero .header_container .link_container a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #3882f6;
+  transform: scaleX(0);
+  transition: transform 300ms ease;
+}
+
+.hero .header_container .link_container a:hover::after {
+  transform: scaleX(1);
+  transform-origin: 0% 50%;
+}
+
+.hero .hero_content {
+  display: flex;
+  padding: 0 0 4rem 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero .hero_content .hero_text {
+  height: auto;
+  width: 25rem;
+  margin: 0 2rem 0 0;
+}
+
+.hero .hero_content .hero_text .hero_header,
+.hero_subtext {
+  color: #e5e7eb;
+}
+
+.hero_header {
+  font-size: var(--hero-main-text);
+  margin: 0 0 1rem 0;
+}
+
+.hero_subtext {
+  font-size: var(--hero-secondary-text);
+  margin: 0 0 1rem 0;
+}
+
+.hero .hero_content .hero_img {
+  height: 200px;
+  width: 500px;
+}
+
+.hero .hero_content .sign_up_btn {
+  border: none;
+  padding: 0.2rem 1rem;
+  background-color: var(--blue-color);
+  border-radius: 0.5rem;
+  font-size: var(--hero-secondary-text);
+  cursor: pointer;
+  color: var(--quote-section-color);
+  font-weight: bold;
+}
+
+.middle_section {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  padding: 3rem;
+}
+
+.middle_section h2 {
+  margin: 0 0 2rem 0;
+}
+
+.middle_section .project_imgs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle_section .project_imgs .project_img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border: var(--blue-color) 5px solid;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.quote_section {
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+  background-color: var(--quote-section-color);
+  color: grey;
+}
+
+.quote_section h2 {
+  font-weight: 300;
+  font-style: italic;
+  font-size: var(--info-quote-text);
+}
+
+.quote_section sub {
+  font-weight: 800;
+  color: black;
+  font-size: var(--hero-secondary-text);
+}
+
+.sign_up_action {
+  /* background-color: #1f2937; */
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.sign_up_action .sign_up_box {
+  background-color: var(--blue-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  color: white;
+  font-size: var(--hero-secondary-text);
+  border-radius: 0.5rem;
+}
+
+.sign_up_action .sign_up_box .sign_up_btn2 {
+  border: white 3px solid;
+  padding: 0.2rem 1rem;
+  background-color: var(--blue-color);
+  border-radius: 0.5rem;
+  font-size: var(--hero-secondary-text);
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--dark-background);
+  color: white;
+}
+
+footer p {
+  padding: 2rem;
+  text-align: center;
+  font-size: var(--header-logo-text);
+}
